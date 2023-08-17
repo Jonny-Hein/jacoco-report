@@ -57,6 +57,7 @@ export async function action(): Promise<void> {
     let head: string
     let prNumber: number | undefined
     switch (event) {
+      case 'workflow_dispatch':
       case 'pull_request':
       case 'pull_request_target':
         base = github.context.payload.pull_request?.base.sha
