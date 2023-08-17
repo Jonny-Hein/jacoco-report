@@ -108,8 +108,8 @@ function action() {
                     core.setFailed(`Only workflow_dispatch, pull requests, and pushes are supported, ${github.context.eventName} not supported.`);
                     return;
             }
-	    core.info(`payload: $(github.context.payload)`);
-	    core.info(`context: $(github.context)`);
+	    core.info(`payload: ${github.context.payload}`);
+	    core.info(`context: ${github.context}`);
             core.info(`base sha: ${base}`);
             core.info(`head sha: ${head}`);
             const client = github.getOctokit(token);
