@@ -70,7 +70,7 @@ export async function action(): Promise<void> {
         break
       default:
         core.setFailed(
-          `Only pull requests and pushes are supported, ${github.context.eventName} not supported.`
+          `Only pull requests, workflow_dispatch, and pushes are supported, ${github.context.eventName} not supported.`
         )
         return
     }
